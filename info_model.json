@@ -1,0 +1,51 @@
+{
+  "nama": "YOLOv8n — Deteksi Korosi (Rust) Replika Panser Anoa",
+  "dataset": {
+    "nama": "Corrosion Detection (format YOLO)",
+    "train": 242,
+    "valid": 74,
+    "test": 34,
+    "lisensi": "CC BY 4.0",
+    "pemilik_asli": "Khubab Ahmad",
+    "sumber": "https://universe.roboflow.com/khubab-ahmad/corrosion-detection-sozcd/dataset/1",
+    "mirror": "https://github.com/chandrashekharb043-arch/corrosion_detection_using_yolov11",
+    "atribusi": "Dataset oleh Khubab Ahmad via Roboflow Universe, dilisensikan CC BY 4.0.",
+    "format_anotasi": "YOLO bbox ternormalisasi (class x_center y_center width height)",
+    "ukuran_citra": "416x416 JPEG"
+  },
+  "hiperparameter": {
+    "model": "YOLOv8n",
+    "bobot_awal": "yolov8n.pt (pra-latih COCO)",
+    "epochs": 30,
+    "imgsz": 416,
+    "batch": 8,
+    "lr0": 0.01,
+    "optimizer": "SGD (default Ultralytics)",
+    "seed": 42,
+    "device": "cpu",
+    "python": "3.12",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1",
+    "ultralytics": "8.4.175"
+  },
+  "metrik": {
+    "sumber": "eksperimen/yolov8n_rust/results.csv (epoch terbaik #28 berdasar fitness = 0.1*mAP50 + 0.9*mAP50-95)",
+    "epoch_terbaik": 28,
+    "precision": "0.84636",
+    "recall": "0.95486",
+    "mAP50": "0.95624",
+    "mAP50-95": "0.69176",
+    "box_loss_train": "0.55067",
+    "validasi_akhir_post_training": {
+      "sumber": "baris METRICS_FINAL pada eksperimen/train_full.log",
+      "precision": "0.8584",
+      "recall": "0.9143",
+      "f1": "0.8854",
+      "mAP50": "0.897",
+      "mAP50-95": "0.6715"
+    }
+  },
+  "tanggal_training": "2026-10-11",
+  "catatan": "Model mendeteksi korosi (Rust) pada komponen logam replika Panser Anoa. Satu kelas: Rust. Bobot best.pt adalah hasil training nyata 30 epoch yang selesai penuh (bukan bobot sementara/demo).",
+  "status": "Model final dari training nyata yang selesai penuh (30/30 epoch). Seluruh angka adalah hasil komputasi nyata, bukan placeholder."
+}

@@ -1,0 +1,13 @@
+# Requirements untuk Streamlit Community Cloud.
+# Versi diselaraskan dengan venv lokal ~/workspace/skripsi_anoa/website/venv.
+# torch CPU diambil dari index resmi PyTorch agar ringan di server gratis.
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+streamlit==1.65.0
+ultralytics==8.4.175
+torch==2.14.1+cpu
+torchvision==0.29.1
+opencv-python-headless==5.0.0.93
+numpy==2.5.4
+pillow==12.3.0
